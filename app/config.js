@@ -11,9 +11,9 @@ var rpcCred = credentials.rpc;
 
 if (rpcCred.cookie && !rpcCred.username && !rpcCred.password && fs.existsSync(rpcCred.cookie)) {
 	console.log(`Loading RPC cookie file: ${rpcCred.cookie}`);
-	
+
 	[ rpcCred.username, rpcCred.password ] = fs.readFileSync(rpcCred.cookie).toString().split(':', 2);
-	
+
 	if (!rpcCred.password) {
 		throw new Error(`Cookie file ${rpcCred.cookie} in unexpected format`);
 	}
@@ -29,7 +29,7 @@ var electrumXServerUriStrings = (process.env.BTCEXP_ELECTRUMX_SERVERS || "").spl
 var electrumXServers = [];
 for (var i = 0; i < electrumXServerUriStrings.length; i++) {
 	var uri = url.parse(electrumXServerUriStrings[i]);
-	
+
 	electrumXServers.push({protocol:uri.protocol.substring(0, uri.protocol.length - 1), host:uri.hostname, port:parseInt(uri.port)});
 }
 
@@ -54,7 +54,7 @@ module.exports = {
 	demoSite: (process.env.BTCEXP_DEMO.toLowerCase() == "true"),
 	queryExchangeRates: (process.env.BTCEXP_NO_RATES.toLowerCase() != "true"),
 	noInmemoryRpcCache: (process.env.BTCEXP_NO_INMEMORY_RPC_CACHE.toLowerCase() == "true"),
-	
+
 	rpcConcurrency: (process.env.BTCEXP_RPC_CONCURRENCY || 10),
 
 	rpcBlacklist:
@@ -122,6 +122,14 @@ module.exports = {
 		"walletlock",
 		"walletpassphrase",
 		"walletpassphrasechange",
+        // Drivechain disabled rpc calls
+        "setgenerate",
+        "createbmmcriticaldatatx",
+        "createcriticaldatatx",
+        "createsidechainproposal",
+        "receivewtprime",
+        "receivewtprimeupdate",
+        "vote",
 	],
 
 	addressApi:process.env.BTCEXP_ADDRESS_API,

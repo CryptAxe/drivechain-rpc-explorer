@@ -106,7 +106,7 @@ module.exports = {
 	},
 	genesisCoinbaseOutputAddressScripthash:"8b01df4e368ea28f8dc0423bcf7a4923e3a12d307c875e47a0cfbf90b5c39161",
 	historicalData: [
-		{
+		/*{
 			type: "blockheight",
 			date: "2009-01-03",
 			blockHeight: 0,
@@ -225,6 +225,7 @@ module.exports = {
 			referenceUrl: "https://bitcoin.stackexchange.com/questions/38994/will-there-be-21-million-bitcoins-eventually/38998#38998",
 			alertBodyHtml: "This is one of 2 'duplicate coinbase' transactions. An early bitcoin bug (fixed by <a href='https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki'>BIP30</a>) allowed identical coinbase transactions - a newer duplicate would overwrite older copies. This transaction was the coinbase transaction for <a href='/block-height/91812'>Block #91,812</a> and, ~3 hours later, <a href='/block-height/91842'>Block #91,842</a>. The 50 BTC claimed as the coinbase for block 91,812 were also overwritten and lost."
 		}
+        */
 	],
 	exchangeRateData:{
 		jsonUrl:"https://api.coindesk.com/v1/bpi/currentprice.json",
