@@ -52,7 +52,7 @@ var currencyUnits = [
 module.exports = {
 	name:"Drivechain",
 	ticker:"BTC",
-	logoUrl:"/img/logo/btc.svg",
+	logoUrl:"/img/logo/drivechain.png",
 	siteTitle:"Drivechain Explorer",
 	siteSummary:"This block explorer is currently displaying blocks from the DriveNet TESTDRIVE chain.",
 	siteDescriptionHtml:"<b>Drivechain Explorer</b> is <a href='https://github.com/cryptaxe/drivechain-rpc-explorer). Forked from the project [btc-rpc-explorer](https://github.com/janoside/btc-rpc-explorer)",
