@@ -151,7 +151,7 @@ module.exports = {
 				{
 					title:"Related Sites",
 					links:[
-						{name: "Drivechain blog", url:"drivechain.info", imgUrl:"/img/logo/drivechain.png"},
+						{name: "Drivechain blog", url:"http://www.drivechain.info/", imgUrl:"/img/logo/drivechain.png"},
 						{name: "Bitcoin Explorer", url:"https://btc.chaintools.io", imgUrl:"/img/logo/btc.svg"},
 						{name: "LND Admin", url:"https://lnd-admin.chaintools.io", imgUrl:"/img/logo/lnd-admin.png"},
 					]
