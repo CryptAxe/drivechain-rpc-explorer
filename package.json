@@ -17,10 +17,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/janoside/btc-rpc-explorer.git"
+    "url": "git+https://github.com/cryptaxe/drivechain-rpc-explorer.git"
   },
   "dependencies": {
     "async": "2.6.2",
+    "babel-types": "^6.26.0",
     "basic-auth": "^2.0.1",
     "bitcoin-core": "2.0.0",
     "bitcoinjs-lib": "3.3.2",

@@ -122,14 +122,14 @@ module.exports = {
 		"walletlock",
 		"walletpassphrase",
 		"walletpassphrasechange",
-        // Drivechain disabled rpc calls
-        "setgenerate",
-        "createbmmcriticaldatatx",
-        "createcriticaldatatx",
-        "createsidechainproposal",
-        "receivewtprime",
-        "receivewtprimeupdate",
-        "vote",
+		// Drivechain disabled rpc calls
+		"setgenerate",
+		"createbmmcriticaldatatx",
+		"createcriticaldatatx",
+		"createsidechainproposal",
+		"receivewtprime",
+		"receivewtprimeupdate",
+		"vote",
 	],
 
 	addressApi:process.env.BTCEXP_ADDRESS_API,

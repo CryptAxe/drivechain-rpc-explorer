@@ -268,7 +268,7 @@ function loadMiningPoolConfigs() {
 
 function getSourcecodeProjectMetadata() {
 	var options = {
-		url: "https://api.github.com/repos/janoside/btc-rpc-explorer",
+		url: "https://api.github.com/repos/cryptaxe/drivechain-rpc-explorer",
 		headers: {
 			'User-Agent': 'request'
 		}
@@ -373,7 +373,7 @@ app.runOnStartup = function() {
 			if (config.electrumXServers && config.electrumXServers.length > 0) {
 				electrumAddressApi.connectToServers().then(function() {
 					global.electrumAddressApi = electrumAddressApi;
-					
+
 				}).catch(function(err) {
 					utils.logError("31207ugf4e0fed", err, {electrumXServers:config.electrumXServers});
 				});
@@ -393,7 +393,7 @@ app.runOnStartup = function() {
 
 				return;
 			}
-			
+
 			global.sourcecodeVersion = log.all[0].hash.substring(0, 10);
 			global.sourcecodeDate = log.all[0].date.substring(0, "0000-00-00".length);
 		});
@@ -444,7 +444,7 @@ app.use(function(req, res, next) {
 
 	res.locals.config = global.config;
 	res.locals.coinConfig = global.coinConfig;
-	
+
 	res.locals.host = req.session.host;
 	res.locals.port = req.session.port;
 
@@ -501,10 +501,10 @@ app.use(function(req, res, next) {
 
 	if (req.session.userMessage) {
 		res.locals.userMessage = req.session.userMessage;
-		
+
 		if (req.session.userMessageType) {
 			res.locals.userMessageType = req.session.userMessageType;
-			
+
 		} else {
 			res.locals.userMessageType = "warning";
 		}
